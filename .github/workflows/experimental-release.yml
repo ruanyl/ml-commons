@@ -31,7 +31,7 @@ jobs:
           sudo apt-get install libopenblas-dev gfortran -y
       - name: Build
         run: |
-          ./scripts/build.sh -v ${{ env.TARGET_VERSION }} -s true
+          bash ./scripts/build.sh -v ${{ env.TARGET_VERSION }} -s true
       - name: Create Release Tag
         run: |
           git tag ${{ env.RELEASE_TAG }}
